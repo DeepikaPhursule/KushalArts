@@ -10,10 +10,10 @@ if(empty($_POST['name'])  		||
 	return false;
    }
 	
-// $name = strip_tags(htmlspecialchars($_POST['name']));
-// $email_address = strip_tags(htmlspecialchars($_POST['email']));
-// $phone = strip_tags(htmlspecialchars($_POST['phone']));
-// $message = strip_tags(htmlspecialchars($_POST['message']));
+ $name = strip_tags(htmlspecialchars($_POST['name']));
+ $email_address = strip_tags(htmlspecialchars($_POST['email']));
+ $phone = strip_tags(htmlspecialchars($_POST['phone']));
+ $message = strip_tags(htmlspecialchars($_POST['message']));
 	
 // // Create the email and send the message
 // $to = 'deepika.phursule@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
@@ -27,9 +27,9 @@ if(empty($_POST['name'])  		||
 
 //Declarate the necessary variables
 $mail_to = "deepika.phursule@gmail.com";
-$mail_from=$_POST["txtEmail"];
+$mail_from=$email_address;
 $mail_sub="Contact Form Details";
-$mail_mesg=$txtMsg;
+$mail_mesg=$message;
 
 /*$headers = "From:$mail_from/r/nReply-to:$mail_from";
 $headers .= "Content-type: text/html\r\n";*/
